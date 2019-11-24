@@ -1,0 +1,207 @@
+% Cheatsheet for LaTeX Workshop from James Yu
+% https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+% based on https://wch.github.io/latexsheet/
+% refcards.sty based on 
+% https://github.com/goerz/Refcards/tree/master/fortran/refcards.sty 
+% from Michael Goerz
+
+% (c) 2019 Ingmar Hellhoff
+
+
+\documentclass[8pt]{extarticle} % extarticle: font sizes < 10
+
+\usepackage[
+      pdftitle={LaTeX-Workshop Reference Card},
+      pdfauthor={Ingmar Hellhoff},
+      pdfkeywords={VS Code, LaTeX, Quick Reference, Refcard, Cheat Sheet, Visual Studio Code},
+      pdfsubject={Quick Reference Card for LaTeX-Workshop from James-Yu}
+]{hyperref}
+
+\usepackage{refcards}
+\usepackage{hologo}
+
+\begin{document}
+\raggedright
+
+\begin{multicols}{3}
+
+\title{\LaTeX\ Workshop Reference Card}
+
+{\small
+(c) 2019 Ingmar Hellhoff \url{<ihellhoff@t-online.de>}
+
+This work is licensed under the Creative Commons Attribution-Noncommercial-Share
+Alike 3.0 License. To view a copy of this license, visit
+\url{http://creativecommons.org/licenses/by-nc-sa/}
+}
+
+\vspace*{1pt}
+
+\section{Snippets und shortcuts}
+  \vspace*{1ex}
+  \subsection{Umgebungen und Gliederung}
+	\vspace*{1ex}
+	\begin{tabular}{L{0.1\linewidth} L{0.40\linewidth}L{0.1\linewidth} L{0.40\linewidth}}
+	\multicolumn{2}{l}{\textbf{Umgebungen}} & 	\multicolumn{2}{l}{\textbf{Gliederung}}  \\
+  \tt BEQ         & equation   & SPA & part         \\
+  \tt BSEQ        & equation*  & SCH & chapter      \\
+  \tt BAL         & align      & SSE & section      \\
+  \tt BSAL        & alig*      & SSS & subsection   \\
+  \tt BIT         & itemize    & SPG & paragraph    \\
+  \tt BEN         & enumerate  & SSP & subparagraph \\
+  \tt BSPL        & split         \\
+  \tt BCAS        & cases\\
+	\tt BFR & frame\\
+	\tt BFI & figure \\
+  \end{tabular}
+
+  \vspace*{1ex}
+  \subsubsection{Gliederung}
+	\vspace*{1ex}
+	Die Struktur des \LaTeX -Projektes ist über das \TeX -Panel auf der linken Seite erreichbar. Die outline-Hierarchie wird durch \textbf{latex-workshop.view.outline.sections} definiert.
+	
+\vspace*{1ex}
+\subsubsection{Gliederungsebenen verschieben}
+\vspace*{1ex}
+\begin{tabular}{L{0.35\linewidth} L{0.35\linewidth} L{0.3\linewidth}}
+  \tt \Ctrl +\Alt +\keystroke{[} & o.\ \Ctrl +\keystroke{l} +\keystroke{[} & eine Ebene hoch \\
+	  \tt \Ctrl +\Alt +\keystroke{]} & o.\ \Ctrl +\keystroke{l} +\keystroke{]} & eine Ebene runter \\
+	  \end{tabular}
+
+\vspace*{1ex}
+\subsection{Griechische Buchstaben}
+\vspace*{1ex}
+  \begin{tabular}{L{0.08\linewidth} L{0.08\linewidth} L{0.3\linewidth}L{0.08\linewidth} L{0.08\linewidth} L{0.3\linewidth}}
+  \tt @a & $\eta$     & \textbackslash alpha     & @\& & $\wedge$ & \textbackslash wedge \\
+  \tt @b & $\beta$    & \textbackslash beta      & @x & $\xi$ & \textbackslash xi  \\
+	\tt @c & $\chi$     & \textbackslash chi       & @y & $\psi$ & \textbackslash psi  \\
+	\tt @d & $\delta$   & \textbackslash delta     & @z & $\zeta$ & \textbackslash zeta  \\
+	\tt @e & $\epsilon$ & \textbackslash epsilon   & @D & $\delta$ & \textbackslash Delta  \\
+	\tt @f & $\phi$     & \textbackslash phi       & @F & $\Phi$ & \textbackslash Phi  \\
+	\tt @g & $\gamma$   & \textbackslash gamma     & @G & $\Gamma$ & \textbackslash Gamma  \\
+	\tt @h & $\eta$     & \textbackslash eta       & @Q & $\Theta$ & \textbackslash Theta  \\
+	\tt @i & $\iota$    & \textbackslash iota      & @L & $\Lambda$ & \textbackslash Lambda  \\
+	\tt @k & $\kappa$   & \textbackslash kappa     & @X & $\Xi$ & \textbackslash Xi  \\
+	\tt @l & $\lambda$  & \textbackslash lambda    & @Y & $\Psi$ & \textbackslash Psi  \\
+	\tt @m & $\mu$      & \textbackslash mu        & @S & $\Sigma$ & \textbackslash Sigma  \\
+	\tt @n & $\nu$      & \textbackslash nu        & @U & $\Upsilon$ & \textbackslash Upsilon  \\
+	\tt @p & $\pi$      & \textbackslash pi        & @W & $\Omega$ & \textbackslash Omega  \\
+	\tt @q & $\theta$   & \textbackslash theta     & @ve & $\varepsilon$ & \textbackslash varepsilon  \\
+	\tt @r & $\rho$     & \textbackslash rho       & @vf & $\varphi$ & \textbackslash varphi  \\
+	\tt @s & $\sigma$   & \textbackslash sigma     & @vs & $\varsigma$ & \textbackslash varsigma  \\
+	\tt @t & $\tau$     & \textbackslash tau       & @vq & $\vartheta$ & \textbackslash vartheta  \\
+	\tt @u & $\upsilon$ & \textbackslash upsilon   &  & &  \\
+	\tt @o & $\eta$     & \textbackslash omega     &  &  & \\
+  \end{tabular}
+
+  \vspace*{1ex}
+  \subsection{Mathematische Zeichen}
+  \vspace*{1ex}
+	  \begin{tabular}{L{0.08\linewidth} L{0.08\linewidth} L{0.3\linewidth}L{0.08\linewidth} L{0.08\linewidth} L{0.3\linewidth}}
+  \tt @( & $\left(\$1 \right)$     & \textbackslash left( \$1 \textbackslash right)     
+	& @0 & $^\circ$ & \textbackslash\textasciicircum circ \\
+  \tt @\textbraceleft & $\left\{\$1 \right\} $    & \textbackslash left\textbackslash\textbraceleft\$1 \textbackslash right\textbackslash\textbraceright  
+	& @; & $\dot{\$1}$ & \textbackslash dot\textbraceleft\$1\textbraceright  \\
+	\tt @[ & $\left[\$1 \right]$     & \textbackslash left[ \$1 \textbackslash right]   
+	& @: & $\ddot{\$1}$ & \textbackslash ddot\textbraceleft\$1\textbraceright \\
+	\tt \_\_ & $_{\$1}$   & \_\{\$1\}     
+	& @= & $\equiv$ & \textbackslash euiv  \\
+	\tt \textasteriskcentered\textasteriskcentered & $^{\$1}$ & \^{}\{\$1\}     
+	& @\textasteriskcentered & $\times$ & \textbackslash times  \\
+	\tt ... & $\dots$     & \textbackslash dots       
+	& @< & $\leq$ & \textbackslash leq  \\
+	\tt @. & $\cdots$   & \textbackslash cdots     
+	& @> & $\geq$ & \textbackslash geq  \\
+	\tt @8 & $\infty$     & \textbackslash infty       
+	& @2 & $\sqrt{\$1}$ & \textbackslash sqrt\textbraceleft\$1\textbraceright  \\
+	\tt @6 & $\partial$    & \textbackslash partial      
+	& @I & $\int_{\$1}^{\$2}$ & \textbackslash int\_\textbraceleft\$1\textbraceright\textasciicircum\textbraceleft\$2\textbraceright\\
+	\tt @\textbackslash & $\frac{\$1}{\$2}$   & \textbackslash frac\textbraceleft\$1\textbraceright\textbraceleft\$2\textbraceright     
+	& @\textbar & $\Big |$ & \textbackslash Big \textbar\\
+	\tt  @\% & $\frac{\$1}{\$2}$   & \textbackslash frac\textbraceleft\$1\textbraceright\textbraceleft\$2\textbraceright  
+	& @\textbackslash & $\setminus$ & \textbackslash setminus  \\
+	\tt @\textasciicircum & $\hat{\$1}$      & \textbackslash Hat\textbraceleft\$1\textbraceright        
+	& @+ & $\bigcup$ & \textbackslash bigcup  \\
+	\tt @\_ & $\bar{\$1}$      & \textbackslash bar\textbraceleft\$1\textbraceright        
+	& @- & $\bigcap$ & \textbackslash bigcap  \\
+	\tt @@ & $\circ$      & \textbackslash circ        
+	& @, & $\nonumber$ & \textbackslash nonumber  \\
+	\end{tabular}
+
+  \vspace*{1ex}
+  \subsection{Font Kommandos}
+  \vspace*{1ex}
+	\begin{tabular}{L{0.15\linewidth} L{0.45\linewidth} L{0.5\linewidth}}
+  \tt fontsize & & Auswahl für Fontgröße \\
+	\tt FNO & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{n} & \textbackslash textnormal\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FRM & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{r} & \textbackslash textrm\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FEM & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{e} & \textbackslash emph\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FSF &  & \textbackslash textsf\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FTT & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{t} & \textbackslash texttt\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FIT & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{i} & \textbackslash textit\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FSL & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{s} & \textbackslash textsl\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FSC & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{c} & \textbackslash textsc\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FUL & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{u} & \textbackslash underline\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FUC &  & \textbackslash uppercase\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FLC &  & \textbackslash lowercase\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FBF & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{b} & \textbackslash textbf\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FSS & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{s} & \textbackslash textsuperscript\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt FBS & \Ctrl +\keystroke{l}, \Ctrl +\keystroke{-} & \textsubscript textnormal\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	 \end{tabular}
+		
+\vspace*{1ex}
+  \subsection{mathematische Font Kommandos}
+  \vspace*{1ex}
+	\begin{tabular}{L{0.15\linewidth} L{0.45\linewidth} L{0.5\linewidth}}
+	\tt MRM & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{r} & \textbackslash mathrm\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt MBF & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{s} & \textbackslash mathbf\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt MBB & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{b} & \textbackslash mathbb\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt MCA & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{c} & \textbackslash mathcal\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt MIT & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{i} & \textbackslash mathit\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+	\tt MTT & \Ctrl +\keystroke{m}, \Ctrl +\keystroke{t} & \textbackslash mathtt\textbraceleft\$\textbraceleft1\textbraceright\textbraceright \\
+ \end{tabular}
+
+\vspace*{1ex}
+  \subsection{Verschiedenes}
+  \vspace*{1ex}
+	\begin{tabular}{L{.5\linewidth} L{0.5\linewidth}}
+	\tt \Ctrl +\keystroke{l}, \Ctrl +\Return & newline + \textbf{\textbackslash item} \\
+	\tt Cmd-Palette: latex-workshop.wrap-env & \textbf{Umgebung} um markierten Text(\textbackslash begin\textbraceleft \textbraceright \ldots \textbackslash end\textbraceleft \textbraceright)\\
+ \end{tabular}
+
+\vspace*{1ex}
+\section{Compiling}
+\vspace*{1ex}
+\subsection{Platzhalter}
+\vspace*{1ex}
+  \begin{tabular}{L{0.17\linewidth} L{0.83\linewidth}}
+  \tt \%DOC\% & Pfad und Dateiname (ohne\ .tex) der \LaTeX-Hauptatei\\
+  \tt \%DOCFILE\%  & Dateiname (ohne\ .tex) der \LaTeX-Hauptdatei \\
+	\tt \%DIR\% & Pfad der \LaTeX-Hauptatei\\
+	\tt \%TMPDIR\% & Pfad zumm Speichern zusätzlicher (temp.) Dateien\\
+	\tt \%OUTDIR\% & Ausgabeverzeichnins (latex-workshop.latex.outDir)\\	
+  \end{tabular}
+
+\vspace*{1ex}
+\subsection{Magic Comments}
+\vspace*{1ex}	
+Optionen für \TeX:
+	\begin{verbatim}
+	% !TEX options = -synctex=1 -interaction=nonstopmode 
+	-file-line-error "%DOC%"
+\end{verbatim}
+\vspace*{1ex}
+Verwendung von \Hologo{XeLaTeX}:
+\begin{verbatim}
+% !TEX program = xelatex
+\end{verbatim}
+\vspace*{1ex}
+Bei Verwendung von Bibliographien \textbf{muss} das entsprechende Programm angegeben werden. Zum Beispiel für \Hologo{BibTeX}:
+\begin{verbatim}
+% !BIB program = bibtex
+\end{verbatim}	
+  
+\end{multicols}
+\end{document}
+
+  
